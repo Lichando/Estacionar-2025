@@ -1,0 +1,23 @@
+@import "reset.css";
+@import "grid.css";
+
+.hide{
+    display: none;
+}
+
+body{
+	font-size: 16px;
+    font-family: 'Oswald', sans-serif;
+}
+b{
+    font-weight: bold;
+}
+@-ms-viewport{
+  width: device-width;
+}
+
+@media only screen and (max-width: 1366px) {
+    body{
+        font-size: 14px !important;
+    }
+}
