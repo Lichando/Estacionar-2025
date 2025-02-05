@@ -33,7 +33,7 @@ Para trabajar con este proyecto, se require siempre hacer una rama desde develop
 
 
 ## 🔗 Links
-[![trello](https://img.shields.io/badge/trello-blue?style=flat&Color=white)](https://trello.com/b/HtxDg3Bd/estacionapp)
+[![Jira](https://img.shields.io/badge/jira-blue?style=flat&Color=white)](https://bianchimauricio14.atlassian.net/jira/software/projects/SCRUM/boards/1/backlog)
 
 [![drive](https://img.shields.io/badge/drive-yellow?style=flat&Color=white)](https://drive.google.com/drive/folders/12n51o-6JE9wbSs6lr1SWywwo9ty5exLM?usp=sharing)
 
