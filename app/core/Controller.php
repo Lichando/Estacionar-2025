@@ -1,7 +1,7 @@
 <?php 
 class Controller
 {
-    protected $title = 'MVC Proyecto | ';
+    protected $title = 'EstacionAPP ';
     protected static $sessionStatus;
     public static $ruta;
 
@@ -13,9 +13,14 @@ class Controller
     // Obtiene el path base para la URL
     public static function path()
     {
-        $reemplazar = str_replace('url=', '', $_SERVER['QUERY_STRING']);
-        $camino =str_replace($reemplazar, '', $_SERVER["REQUEST_URI"]);
-        self::$ruta = $camino;
+        // $reemplazar = str_replace('url=', '', $_SERVER['QUERY_STRING']);
+        // $camino =str_replace($reemplazar, '', $_SERVER["REQUEST_URI"]);
+        // self::$ruta = $camino;
+        // return self::$ruta;
+        $rutaBase = dirname($_SERVER['SCRIPT_NAME']);
+
+        # Asegurar que termine con una barra
+        self::$ruta = rtrim($rutaBase, '/') . '/';
         return self::$ruta;
     }
 

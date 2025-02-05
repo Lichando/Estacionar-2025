@@ -1,23 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import "reset.css";
-@import "grid.css";
+@import "styler.css";
+@import "bootstrap.css";
 
-.hide{
+.hide {
     display: none;
 }
 
-body{
-	font-size: 16px;
-    font-family: 'Oswald', sans-serif;
-}
-b{
-    font-weight: bold;
-}
-@-ms-viewport{
-  width: device-width;
+@-ms-viewport {
+    width: device-width;
 }
 
 @media only screen and (max-width: 1366px) {
-    body{
+    body {
         font-size: 14px !important;
     }
 }

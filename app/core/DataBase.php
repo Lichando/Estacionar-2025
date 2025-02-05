@@ -5,7 +5,7 @@
 class DataBase
 {
     private static $host = "localhost";
-    private static $dbname = "basededatosNombre";
+    private static $dbname = "estacionapp_db";
     private static $dbuser = "root";
     private static $dbpass = "";
 
