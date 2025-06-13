@@ -1,20 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
 <?= $head ?>
-<?= $header ?>
+</head>
 <title><?= $title ?></title>
-<div class="d-flex justify-content-center pt-5 bg-body-tertiary sticky-top">
+
+<body class="bg-body-tertiary col-12">
+    <?= $header ?>
+    <div class="d-flex justify-content-center pt-5 bg-body-tertiary sticky-top">
     <div class="navbar col-11 d-flex">
         <div class="d-flex justify-content-center col-12 py-5">
             <div class="col-12 d-flex justify-content-between align-items-center text-secondary">
                 <div style="font-size:30px;font-weight:600;">LISTADO DE FRANJAS</div>
                 <a href="agregar" class="btn py-2 px-4 bg-azul-500 text-white btn-primary"
-                    style="font-size:30px; font-weight: 600;"> + Add</a>
+                    style="font-size:30px; font-weight: 600;"> + Nueva franja</a>
             </div>
         </div>
     </div>
 </div>
 
-
-<body class="bg-body-tertiary col-12">
     <?php
 
     /* echo "<pre>";
@@ -55,8 +59,7 @@
                         <div class="d-flex justify-content-between align-items-center col-5">
                             <div class="col-8 radio-small d-flex justify-content-center p-1 <?= $estado == 1 ? 'alert-success' : 'alert-danger'; ?>"
                                 style="font-size:30px;font-weight: bold;"><?= $estado == 1 ? 'Activa' : 'Inactiva'; ?></div>
-                            <a href="../franja/agregar"><img class="col-4 d-flex justify-content-center"
-                                    src="/estacionar-isei-2024/public/img/flechitaGris.png" alt=">"></a>
+                            <a href="../franja/agregar"><i class="fa fa-arrow-down"></i></a>
                         </div>
                     </div>
                     <div class="col-12 d-flex justify-content-between pt-4">
@@ -84,3 +87,5 @@
 
     ?>
     </body>
+
+    </html>

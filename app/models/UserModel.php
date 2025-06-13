@@ -8,34 +8,34 @@ class UserModel extends Model
 {
 	protected $table = "usuarios";
 	protected $primaryKey = "IdUsuario";
-	protected $secundaryKey = "correo";
+	protected $secundaryKey = "email";
 	protected $tertiaryKey = "nickname";
 	public $email;
 
 	public static function findEmail($email)
 	{
 		$model = new static();
-		$sql = "SELECT * FROM " . $model->table . " WHERE " . $model->secundaryKey . " = :correo";
-		$params = [":correo" => $email];
+		$sql = "SELECT * FROM " . $model->table . " WHERE " . $model->secundaryKey . " = :email";
+		$params = [":email" => $email];
 		$result = DataBase::query($sql, $params);
 		if ($result) {
 			return [
 				'existe' => true,
-				'msg' => 'el correo ya esta registrado'
+				'msg' => 'el email ya esta registrado'
 			];
 		} else {
 			return [
 				'existe' => false,
-				'msg' => 'el correo es valido'
+				'msg' => 'el email es valido'
 			];
 		}
 	}
 
-	public static function FindUser($correo)
+	public static function FindUser($email)
 	{
 		$model = new static();
-		$sql = "SELECT IdUsuario,nickname,correo, contrasena FROM " . $model->table . " WHERE " . $model->secundaryKey . " = ?";
-		$params = [$correo];
+		$sql = "SELECT IdUsuario,nickname,email, contrasena FROM " . $model->table . " WHERE " . $model->secundaryKey . " = ?";
+		$params = [$email];
 		$result = DataBase::query($sql, $params);
 		if ($result) {
 			return [
@@ -72,13 +72,13 @@ class UserModel extends Model
 	public static function InsertUser($data)
 	{
 		$model = new static();
-		$sql = "INSERT INTO " . $model->table . " (firstname, lastname, nickname, correo, contrasena, tipo_usuario, verificado, code_verify, FechaAlta, estado)
+		$sql = "INSERT INTO " . $model->table . " (firstname, lastname, nickname, email, contrasena, tipo_usuario, verificado, code_verify, FechaAlta, estado)
             VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 		$params = [
 			$data['firstname'] ?? '',
 			$data['lastname'] ?? '',
 			$data['nickname'] ?? '',
-			$data['correo'] ?? '',
+			$data['email'] ?? '',
 			$data['contrasena'] ?? '',
 			$data['tipo_usuario'] ?? null,
 			0, //email verificado
@@ -92,7 +92,7 @@ class UserModel extends Model
 	public static function verifyCode($email, $code)
 	{
 		$model = new static();
-		$sql = "SELECT correo, code_verify FROM " . $model->table . " WHERE " . $model->secundaryKey . " = ? AND code_verify = ?";
+		$sql = "SELECT email, code_verify FROM " . $model->table . " WHERE " . $model->secundaryKey . " = ? AND code_verify = ?";
 		$params = [$email, $code];
 		$resultado = DataBase::query($sql, $params);
 		if ($resultado) {

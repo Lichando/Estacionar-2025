@@ -12,7 +12,7 @@
 		<div class="design-container">
 			<p class="error_text_content"><span class="error_text_content-span">Error 404</span>, no se encontro el
 				sitio.</p>
-			<img class="error_content" src="img/404.png" alt="No se encontro el sitio">
+			<img class="error_content" src="../img/404.png" alt="No se encontro el sitio">
 		</div>
 	</div>
 	<style>

@@ -52,6 +52,7 @@ class ManageController extends Controller
 
         $head = SiteController::head();
         $header = SiteController::header();
+        $path = static::path();
         Response::render($this->viewDir(__NAMESPACE__), 'agregar', [
             "head" => $head,
             "header" => $header,
@@ -91,6 +92,7 @@ class ManageController extends Controller
 
         $head = SiteController::head();
         $header = SiteController::header();
+        $path = static::path();
         Response::render($this->viewDir(__NAMESPACE__), 'listar', [
             "head" => $head,
             "header" => $header,
@@ -98,6 +100,26 @@ class ManageController extends Controller
             //"patch" => self::$patch,
             //"footer" =>  SiteController::footer(),
             "franjas" => $franjas
+        ]);
+    }
+    public function actionPromos()
+    {
+
+        $sqlPromos = "SELECT * FROM promociones";
+
+        $promos = DataBase::query($sqlPromos);
+
+        $head = SiteController::head();
+        $header = SiteController::header();
+        $path = static::path();
+        Response::render($this->viewDir(__NAMESPACE__), 'promos', [
+            "head" => $head,
+            "header" => $header,
+            "title" => $this->title . "Promociones",
+            "promos"=>$promos,
+            //"patch" => self::$patch,
+            //"footer" =>  SiteController::footer(),
+            
         ]);
     }
 }

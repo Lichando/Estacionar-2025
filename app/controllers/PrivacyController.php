@@ -8,7 +8,7 @@ use \DataBase;
 class PrivacyController extends Controller
 {
 
-    public function actionPrivacycenter()
+    public function actionPolicies()
     {
         $head = SiteController::head();
         Response::render($this->viewDir(__NAMESPACE__), 'privacycenter', [

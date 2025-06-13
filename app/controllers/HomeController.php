@@ -79,8 +79,4 @@ class HomeController extends Controller
 		]);
 	}
 
-	private function actionHola()
-	{
-		echo 'hola';
-	}
 }

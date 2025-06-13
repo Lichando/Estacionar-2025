@@ -1,7 +1,7 @@
 <nav class="navbar bg-body-tertiary fixed-top">
     <div class="container-fluid">
         <a class="navbar-brand d-flex align-items-center bold text-azul-900" href="#PATH#home/inicio">
-            <img src="../img/logo-estacionar-rem-bg.png" alt="Logo" width="80" class="d-inline-block align-text-top">
+            <img src="#PATH#img/logoestacionar.png" alt="Logo" width="80" class="d-inline-block align-text-top">
             Estacionar
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
